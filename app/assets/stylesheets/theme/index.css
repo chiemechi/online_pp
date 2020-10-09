@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+}
+.left-bar {
+  background-color: #253141;
+  width:50vw;
+  height: 100vh;
+}
+.right-bar {
+  background-color: #ffffff;
+  width:50vw;
