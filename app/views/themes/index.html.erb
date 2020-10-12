@@ -27,6 +27,9 @@
  <head>
  
     <script language="javascript" type="text/javascript">
+
+
+
       // オンライン飲み会ルーレット
       var roulette;
 
@@ -44,6 +47,23 @@
           clearInterval(roulette);
         }
       }
+
+    
+    const num_1 = ['1番の人？', '２番の人', '３番の人','４番の人'];
+      function talker2() {
+      talker_roulette = setInterval(function() {
+      var idx = Math.floor( Math.random() * num_1.length );
+      document.getElementById("talker_roulette").innerHTML = num_1[idx];
+        }, 100);
+        }
+ 
+      function talker2_2() {
+        if(talker_roulette) {
+          clearInterval(talker_roulette);
+        }
+      }      
+
+
 
       // アイスブレイクルーレット
 
@@ -67,11 +87,18 @@
  </head>
 
   <body>
+
+
+
+  
     <div class="contents">
       <div class="first-view">
-      <!-- オンライン飲み会を表示する -->
+       
+
+
+
       </div>
-      <div class="upper-content">
+      <%# <div class="upper-content">
         <!-- オンライン飲み会を表示する -->
       <h2 class="heading-name">オンライン飲み会</h2>
     </div>
@@ -83,7 +110,9 @@
       <input type="button" value="スタート" id="start" onclick="start();"/>
       <input type="button" value="ストップ" id="stop" onclick="stop();"/>
     </div>
+     %>
   
+
 
    <div class="middle-content">
           <!-- アイスブレイクを表示する -->
@@ -96,6 +125,22 @@
           <input type="button" value="ストップ" id="stop2"   onclick="stop2();"/>
         </div>
       </div>
+          <div class="kakeru">
+          ✖️
+          </div>
+      <div class="outline">
+          <div class="roulette" id="talker_roulette">誰が話す？</div>
+          <br />
+          <input type="button" value="スタート" id="talker2"  onclick="talker2();"/>
+          <input type="button" value="ストップ" id="talker2_2"   onclick="talker2_2();"/>
+        
+         <%= form_with url: root_path do |form| %>
+        <input type="text"  id=name1> 
+        <input type="text"  id=name2> 
+        <% end %>       
+         </div>
+      </div>
+      
     </div>
 
 
