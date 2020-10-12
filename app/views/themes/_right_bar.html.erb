@@ -1,1 +1,35 @@
-<発表者>
+
+  <!DOCTYPE html>
+<html>
+  <head>
+ 
+<div>
+
+    <script language="javascript" type="text/javascript">
+      var roulette;
+
+      const spotList = ['名前は？', '好きな人は', '貯金は','給料は',' 洗濯機'];
+function start() {
+  roulette = setInterval(function() {
+    var idx = Math.floor( Math.random() * spotList.length );
+    document.getElementById("roulette").innerHTML = spotList[idx];
+  }, 100);
+}
+ 
+      // ルーレットを停止
+      function stop() {
+        if(roulette) {
+          clearInterval(roulette);
+        }
+      }
+
+    </script>
+
+    <div class="contents">
+      <div class="first-view">
+      <!-- オンライン飲み会を表示する -->
+      </div>
+      <div class="upper-content">
+        <!-- オンライン飲み会を表示する -->
+       <h2 class="heading-name">オンライン飲み会</h2>
+    </div>
