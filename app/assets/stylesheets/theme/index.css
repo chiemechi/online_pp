@@ -1,11 +1,10 @@
-.wrapper {
-  display: flex;
+.outline {
+  text-align:center;
 }
-.left-bar {
-  background-color: #253141;
-  width:50vw;
-  height: 100vh;
+.roulette {
+  display: inline-block;
+  border:1px solid #000000;
+  font-size:40px;
+  width:400px;
+  background-color:white;
 }
-.right-bar {
-  background-color: #ffffff;
-  width:50vw;
