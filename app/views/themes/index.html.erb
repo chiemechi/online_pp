@@ -21,6 +21,8 @@
 
  <head>
     <script language="javascript" type="text/javascript">
+  
+    // ⭐️話テーマ
     var roulette;
     const List1 = ['名前は？', '好きな人は', '貯金は','給料は',' 洗濯機'];
     // ルーレットを開始
@@ -43,20 +45,43 @@
     }
 
 
-    const num_1 = []
-      function talker2() {
+    // ⭐️誰が話すか
+
+    //参加者一覧
+    window.onload = function() {
+    const addNameButton = document.getElementById('add-button')
+    addNameButton.addEventListener('click', () => {
+    const input = document.getElementById('add-name');
+    const li =document.createElement('li');
+    li.innerText = input.value;
+    const ul =document.querySelector('ul');
+    ul.appendChild(li);
+    
+    });
+    }
+    
+
+    const num_1 = ['1番の人？', '２番の人', '３番の人','４番の人'];
+    function talker2() {
       talker_roulette = setInterval(function() {
+       document.getElementById("talker2").disabled = true;
       var idx = Math.floor( Math.random() * num_1.length );
       document.getElementById("talker_roulette").innerHTML = num_1[idx];
         }, 100);
         }
+      
  
       function talker2_2() {
+        document.getElementById("talker2").disabled = false;
         if(talker_roulette) {
           clearInterval(talker_roulette);
         }
       }   
+
+
   </script>
+ 
+ 
  </head>
  
   
@@ -76,13 +101,11 @@
  
     <div class="kakeru">✖️</div>
 
-  <div class="outline">
-          <div class="roulette" id="talker_roulette">aaaa</div>
+    <div class="outline">
+          <div class="roulette" id="talker_roulette">誰が話そうか</div>
           <br />
-          <input type="button" value="スタート" id="talker2"  onclick="talker2();"/>
+          <input type="button" value="スタート" id="talker2"     onclick="talker2();"/>
           <input type="button" value="ストップ" id="talker2_2"   onclick="talker2_2();"/>
-          <%# <input type="button" value="スタート" id="talker１_a"  onclick="talker();">
-          <input type="button" value="ストップ" id="talker１_b"   onclick="talker();"/> %>
           <div>参加者一覧</div>
           <ul></ul>
           <input type="text" id="add-name" size="50"  placeholder="" ><button id="add-button">add</button>
