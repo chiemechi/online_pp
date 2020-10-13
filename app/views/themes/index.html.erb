@@ -1,55 +1,49 @@
-  <header>
+
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<header>
      <div class="heading"> 
       <h1 class="title">NETA</h1>
      </div>
 
      <div class="navbar">
-      <ul class="nav-lists">
+      <%# <ul class="nav-lists">
          <li>シーン</li>
          <li>サロンガイド</li>
          <li>メニュー</li>
          <li>スタッフ一覧</li>
-       </ul>
+       </ul> %>
      </div>
-   </header>
+ </header>
 
-  
-  
-  
-  
-  
- 
- 
- 
-  <!DOCTYPE html>
-<html>
- 
  <head>
- 
     <script language="javascript" type="text/javascript">
+    var roulette;
+    const List1 = ['名前は？', '好きな人は', '貯金は','給料は',' 洗濯機'];
+    // ルーレットを開始
+    function start() {
+    roulette = setInterval(function() {
+    document.getElementById("start").disabled = true;
+
+    var idx = List1[Math.floor( Math.random() * List1.length )];
+    // ルーレット
+    document.getElementById("roulette").innerHTML = idx;
+    }, 100);
+    }
+
+    // ルーレットを停止
+    function stop() {
+    document.getElementById("start").disabled = false;
+    if(roulette) {
+    clearInterval(roulette);
+    }
+    }
 
 
-
-      // オンライン飲み会ルーレット
-      var roulette;
-
-      const List1 = ['名前は？', '好きな人は', '貯金は','給料は',' 洗濯機'];
-      function start() {
-
-      roulette = setInterval(function() {
-      var idx = Math.floor( Math.random() * List1.length );
-      document.getElementById("roulette").innerHTML = List1[idx];
-        }, 100);
-        }
- 
-      function stop() {
-        if(roulette) {
-          clearInterval(roulette);
-        }
-      }
-
-    
-    const num_1 = ['1番の人？', '２番の人', '３番の人','４番の人'];
+    const num_1 = []
       function talker2() {
       talker_roulette = setInterval(function() {
       var idx = Math.floor( Math.random() * num_1.length );
@@ -61,91 +55,38 @@
         if(talker_roulette) {
           clearInterval(talker_roulette);
         }
-      }      
-
-
-
-      // アイスブレイクルーレット
-
-      const List2 = ['あいう', 'かきく', 'さしす','なにぬ',' 洗濯機'];
-      function start1() {
-
-      roulette2 = setInterval(function() {
-      var idx = Math.floor( Math.random() * List2.length );
-      document.getElementById("roulette２").innerHTML = List2[idx];
-      }, 100);
-      }
-
-      function stop2() {
-        if(roulette2) {
-          clearInterval(roulette2);
-        }
-      }
-
-    </script>
-  
+      }   
+  </script>
  </head>
-
-  <body>
-
-
-
+ 
   
-    <div class="contents">
-      <div class="first-view">
-       
-
-
-
-      </div>
-      <%# <div class="upper-content">
-        <!-- オンライン飲み会を表示する -->
+ <body>
+  <div class="upper-content">
+      
+    <!-- オンライン飲み会を表示する -->
       <h2 class="heading-name">オンライン飲み会</h2>
-    </div>
 
-    
-    <div class="outline">
-      <div class="roulette" id="roulette">何を話そうか</div>
-      <br />
-      <input type="button" value="スタート" id="start" onclick="start();"/>
-      <input type="button" value="ストップ" id="stop" onclick="stop();"/>
-    </div>
-     %>
   
+     <div class="outline">
+        <div class="roulette" id="roulette">何を話そうか</div>
+        <br />
+        <input type="button" value="スタート" id="start" onclick="start();"/>
+        <input type="button" value="ストップ" id="stop" onclick="stop();"/>
+      </div>  
+ 
+    <div class="kakeru">✖️</div>
 
-
-   <div class="middle-content">
-          <!-- アイスブレイクを表示する -->
-      <h2 class="heading-name">アイスブレイク</h2>
-
-      <div class="outline">
-          <div class="roulette" id="roulette２">何を話そうか</div>
-          <br />
-          <input type="button" value="スタート" id="start1"  onclick="start1();"/>
-          <input type="button" value="ストップ" id="stop2"   onclick="stop2();"/>
-        </div>
-      </div>
-          <div class="kakeru">
-          ✖️
-          </div>
-      <div class="outline">
-          <div class="roulette" id="talker_roulette">誰が話す？</div>
+  <div class="outline">
+          <div class="roulette" id="talker_roulette">aaaa</div>
           <br />
           <input type="button" value="スタート" id="talker2"  onclick="talker2();"/>
           <input type="button" value="ストップ" id="talker2_2"   onclick="talker2_2();"/>
-        
-         <%= form_with url: root_path do |form| %>
-        <input type="text"  id=name1> 
-        <input type="text"  id=name2> 
-        <% end %>       
-         </div>
-      </div>
-      
-    </div>
+          <%# <input type="button" value="スタート" id="talker１_a"  onclick="talker();">
+          <input type="button" value="ストップ" id="talker１_b"   onclick="talker();"/> %>
+          <div>参加者一覧</div>
+          <ul></ul>
+          <input type="text" id="add-name" size="50"  placeholder="" ><button id="add-button">add</button>
+             
+    </div> 
 
-
-
-
-
-
-  </body>
+ </body>
