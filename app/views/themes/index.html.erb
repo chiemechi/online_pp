@@ -56,20 +56,22 @@
     li.innerText = input.value;
     const ul =document.querySelector('ul');
     ul.appendChild(li);
-    
+     let num_1 = [];
+     num_1.push('li.innerText')
+    console.log(num_1)
+
     });
     }
     
-
-    const num_1 = ['1番の人？', '２番の人', '３番の人','４番の人'];
-    function talker2() {
+      let num_1 = [];
+      function talker2() {
       talker_roulette = setInterval(function() {
        document.getElementById("talker2").disabled = true;
       var idx = Math.floor( Math.random() * num_1.length );
       document.getElementById("talker_roulette").innerHTML = num_1[idx];
         }, 100);
         }
-      
+      ;
  
       function talker2_2() {
         document.getElementById("talker2").disabled = false;
