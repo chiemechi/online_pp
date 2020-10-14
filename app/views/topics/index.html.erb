@@ -1,4 +1,19 @@
 
+<header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">PicTweet</a></h1>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </div>
+        <% else %>
+          <div class="grid-6">
+            <%= link_to "ログイン", new_user_session_path, class: "post" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+          </div>
+        <% end %>
+      </div>
+    </header>
 <div class='main'>
 
   <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
@@ -27,7 +42,7 @@
     <ul class='reason-lists'>
       <li class='list'>
       <div class=topic_game>
-      <a href="" class="btn btn-border-shadow btn-border-shadow--color">使ってみる</a>
+      <a href=/themes class="btn btn-border-shadow btn-border-shadow--color">使ってみる</a>
       </div>
         <%= image_tag "furima-intro01.png", class:"list-pict" %>
         <span class='reason-list-number'>1</span>
