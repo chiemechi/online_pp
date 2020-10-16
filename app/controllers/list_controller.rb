@@ -28,6 +28,11 @@ before_action :set_list, only: [:edit,:update]
     end
   end
 
+  def destroy
+    @list.destroy
+    redirect_to top_index_path
+  end
+
   private
     def list_params
       params.require(:list).permit(:title).merge(user: current_user)
