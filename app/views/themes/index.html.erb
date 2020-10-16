@@ -48,6 +48,7 @@
     // ⭐️誰が話すか
 
     //参加者一覧
+      let num_1 = [];
     window.onload = function() {
     const addNameButton = document.getElementById('add-button')
     addNameButton.addEventListener('click', () => {
@@ -56,14 +57,13 @@
     li.innerText = input.value;
     const ul =document.querySelector('ul');
     ul.appendChild(li);
-     let num_1 = [];
-     num_1.push('li.innerText')
-    console.log(num_1)
+    let name = input.value
+     num_1.push(name)
 
     });
     }
     
-      let num_1 = [];
+     
       function talker2() {
       talker_roulette = setInterval(function() {
        document.getElementById("talker2").disabled = true;
