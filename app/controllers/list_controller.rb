@@ -1,6 +1,6 @@
 class ListController < ApplicationController
 
-before_action :set_list, only: [:edit,:update]
+before_action :set_list, only: [:edit,:update,:destroy]
 
   def new
     @list = List.new
@@ -9,7 +9,7 @@ before_action :set_list, only: [:edit,:update]
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to :root
+      redirect_to top_index_path
     else
       render action: :new
     end
