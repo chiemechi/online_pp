@@ -1,0 +1,21 @@
+.carddetailPage {
+ 
+    margin: 60px auto 0;
+    max-width: 600px;
+   
+    }
+
+    .cardContents_title{
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+
+    .cardContents_memo{
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+
+    .cardContents_listStatus{
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 30px;
+    }

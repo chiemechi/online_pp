@@ -1,18 +1,4 @@
-<header class="header">
-      <nav class="nav">
-        <ul class="header_menu">
-          <li class="nav-link">〇〇さん</li>
-          <li class="header_menu_title"><%= link_to "kanban", root_path, class: "nav-link" %></li>
-          <li><%= link_to "リストを作成", new_list_path, class: "nav-link listNew" %></li>
-          <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
-        </ul>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="topPage">
+<div class="topPage">
   <div class="listWrapper">
     <% @lists.each do |list| %>
       <div class="list">
@@ -23,23 +9,28 @@
             <%= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_list_path(list)) %>
           </div>
         </div>
+
         <div class="cardWrapper">
-        
           <% list.cards.each do |card| %>
-            <div class="card">
-              <h3 class="card_title"><%= card.title %></h3>
-              <% if card.memo.size > 0 %>
-                <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
-              <% end %>
-            </div>
+
+           
+            <%= link_to list_card_path(list.id, card.id), class:"cardDetail_link" do %>
+              <div class="card">
+                <h3 class="card_title"><%= card.title %></h3>
+                <% if card.memo.size > 0 %>
+                  <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
+                <% end %>
+              </div>
+            <% end %>
+          
+          
           <% end %>
 
           <div class="addCard">
             <i class="far fa-plus-square"></i>
-            <%= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link" %>
+            <%= link_to "さらにカードを追加", new_list_card_path(list.id), class: "addCard_link" %>
           </div>
         </div>
-         
       </div>
     <% end %>
   </div>
