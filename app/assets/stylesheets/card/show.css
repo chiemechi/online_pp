@@ -19,3 +19,20 @@
       border-bottom: 1px solid #ccc;
       margin-bottom: 30px;
     }
+
+    .cardContents_btnArea{
+      max-width: 200px;
+      margin: 0 auto;
+      background: #026aa7;
+      padding: 7px;
+      border-radius: 10px;
+      transition: opacity .5s;
+      text-decoration: none;
+      text-align: center;
+    }
+    .edit_btn{
+      color: white;
+    }
+    .delete_btn{
+      color: red;
+    }

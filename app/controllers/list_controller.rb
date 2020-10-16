@@ -20,7 +20,6 @@ before_action :set_list, only: [:edit,:update,:destroy]
   end
 
   def update
-  
     if @list.update_attributes(list_params)
       redirect_to top_index_path
     else
