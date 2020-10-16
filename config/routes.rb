@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :users
   resources :themes
   resources :list
-  
+  resources :top, only: :index
 end
