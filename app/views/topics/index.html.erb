@@ -1,39 +1,5 @@
 
-<header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">PicTweet</a></h1>
-        <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          </div>
-        <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-          </div>
-        <% end %>
-      </div>
-    </header>
-<div class='main'>
-
-  <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
-  <div class='title-contents'>
-    <h2 class='service-title'>
-      人生を変えるフリマアプリ
-    </h2>
-    <p class='service-explain'>
-      FURIMAはだれでもかんたんに出品・購入できる
-    </p>
-    <p class='service-explain'>
-      フリマアプリです
-    </p>
-    <div class='store-btn'>
-      <%= link_to image_tag("https://linkmaker.itunes.apple.com/ja-jp/badge-lrg.svg?releaseDate=2011-09-21&kind=iossoftware&bubble=ios_apps", class:"apple-btn"), "#" %>
-      <%= link_to image_tag("dl-android.png", class:"google-btn"), "#" %>
-    </div>
-  </div>
-  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
-
+ 
   <%# サイトができることのtoppage %>
   <div class='select-reason-contents'>
     <h2 class='title'>
@@ -44,8 +10,7 @@
       <div class=topic_game>
       <a href=/themes class="btn btn-border-shadow btn-border-shadow--color">使ってみる</a>
       </div>
-        <%= image_tag "furima-intro01.png", class:"list-pict" %>
-        <span class='reason-list-number'>1</span>
+       
         <h3 class='reason-list-text'>
           <span class='reason-list-blue-text'>トークテーマ</span>
           を決めてくれる
@@ -58,17 +23,13 @@
       <div class=topic_game>
       <a href=/top class="btn btn-border-shadow btn-border-shadow--color">使ってみる</a>
       </div>
-        <%= image_tag "furima-intro02.png", class:"list-pict" %>
-        <span class='reason-list-number'>2</span>
+       
+        
         <h3 class='reason-list-text'>
           <span class='reason-list-blue-text'>TO　do&タイムスケジュール</span>
           で使いやすい
         </h3>
-        <
+      
   </div>
  
-
-
-  
-  
 <%= render "shared/footer" %>
