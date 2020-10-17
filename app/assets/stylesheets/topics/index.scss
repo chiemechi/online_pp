@@ -1,157 +1,56 @@
-
-
-
-.service-title {
-  font-size: 8vh;
+.top-text{
+  font-size:80px;
+}
+.top_pic{
+  height: 300px;
+  width: 300px;
+  
 }
 
-.service-explain {
-  font-size: 2.5vh;
-  line-height: 40px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
-
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
-
-/* FURIMAが選ばれる3つの理由部分 */
-.select-reason-contents {
-  padding: 5vh 15vw;
-}
-
-.select-reason-contents>.title {
+.head_pic{
   text-align: center;
-  font-size: 3.5vh;
-  font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
+  // margin : 0 auto
+  
 }
 
-.select-reason-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+.issu_title{
+
+
+  
+  
 }
 
-.reason-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.reason-lists>.list {
-  width: 33vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.list-pict {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.reason-list-number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 60px;
-  background-color: #3ccace;
-  color: #fff;
-}
-
-.reason-list-text {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 50px;
-}
-
-.reason-list-blue-text {
-  color: #3ccace;
-}
-
-.reason-list-description {
-  font-size: 18px;
+.issu_title_text{
   margin-top: 20px;
+  background-color:white;
+  width: 500px;
+  margin-left:100px ;
 }
 
-/* //FURIMAが選ばれる3つの理由部分 */
-
-
-
-
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
+.issu_pic{
+  height: 200px;
+  width: 200px;
   text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
+}
+.pic_text{
+ 
+  margin-top:10px ;
+
 }
 
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
-}
-
-
-.item-info {
-  background-color: #FFF;
-  color: black;
-  padding: 1vw;
-}
-
-.item-name {
-  font-size: 2.5vh;
-}
-
-.item-price {
-  font-size: 1.5vh;
+.issu{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+ text-align: center;
+ padding-top:200px ;
+
 }
 
-
-.star-btn {
-  display: flex;
-  align-items: center;
+.top-btn{
+  padding-top:200px ;
 }
 
-.star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
-}
-
-.star-count {
-  font-size: 2vh;
-}
-
-/* //商品一覧 */
-
+// botannCSS
 *,
 *:before,
 *:after {
@@ -162,12 +61,7 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-/* 背景用*/
-body {
-  padding: 30px;
+  font-size: 30.5%;
 }
 
 .btn,
@@ -194,42 +88,101 @@ button.btn {
   border-radius: 0.5rem;
 }
 
-a.btn-border-shadow {
-  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+a.btn-emergency {
+  position: relative;
 
-  background: #fff;
+  display: block;
+
+  width: 200px;
+  height: 130px;
+  margin: 0 auto;
 }
 
-a.btn-border-shadow:before {
-  position: absolute;
-  top: -6px;
-  left: -6px;
+a.btn-emergency:hover .btn-emergency-top {
+  top: 10px;
 
-  width: 100%;
-  height: 100%;
+  height: 50px;
+}
+
+a.btn-emergency:active .btn-emergency-top {
+  top: 20px;
+
+  height: 40px;
+}
+
+.btn-emergency-top {
+  position: absolute;
+  top: 0;
+  left: 20px;
+
+  width: 160px;
+  height: 60px;
+  margin-top: 30px;
+
+  -webkit-transition: all 0.3s;
+
+  transition: all 0.3s;
+
+  border-radius: 0 0 50% 50%;
+  background: #d62d2d;
+}
+
+.btn-emergency-top:before {
+  position: absolute;
+  top: -30px;
+  left: 0;
+
+  width: 160px;
+  height: 60px;
 
   content: "";
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 
-  border: 3px solid #000;
-  border-radius: 0.5rem;
+  border-radius: 80px / 30px;
+  background: #ed4c4c;
 }
 
-a.btn-border-shadow:hover {
-  padding: calc(1.5rem - 6px) 3rem;
-}
+.btn-emergency-top span {
+  font-size: 38px;
+  font-weight: bold;
 
-a.btn-border-shadow:hover:before {
-  top: 0;
+  position: absolute;
+  top: -24px;
   left: 0;
+
+  width: 100%;
+
+  -webkit-transform: scaleY(0.75);
+
+  transform: scaleY(0.75);
+  text-align: center;
+
+  color: #f6a3a3;
 }
 
-a.btn-border-shadow--color {
-  border-radius: 0;
-  background: yellow;
+.btn-emergency-bottom {
+  position: absolute;
+  top: 38px;
+  left: 0;
+
+  width: 200px;
+  height: 80px;
+
+  border-radius: 100px / 40px;
+  background: #d8e4ea;
+  -webkit-box-shadow: 0 8px 0 #c4cacc;
+  box-shadow: 0 8px 0 #c4cacc;
 }
 
-a.btn-border-shadow--color:before {
-  border-radius: 0;
+
+.top-btn{
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-btn_a{
+  padding-left: 200px;
+}
+
+.top-btn_b{
+  padding-right: 200px;
 }

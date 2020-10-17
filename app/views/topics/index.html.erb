@@ -1,42 +1,89 @@
 
-  <body>
+<body>
     <header class="header">
+    <div>
+    <h1 class="#">PicTweet</h1>
+    </div>
+   <div>
+       <% if user_signed_in? %>
+
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     
-        <h1 class="grid-6"><a href="/">PicTweet</a></h1>
-        <div class="user_nav grid-6">
-   
-        </div>
-      </div>
+        <% else %>
+
+            <%= link_to "ログイン", new_user_session_path, class: "post" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+
+        <% end %>
+    </div>
     </header>
-  <div class='select-reason-contents'>
-    <h2 class='title'>
-      このサイトができること
-    </h2>
-    <ul class='reason-lists'>
-      <li class='list'>
-      <div class=topic_game>
-      <a href=/themes class="btn btn-border-shadow btn-border-shadow--color">使ってみる</a>
+<div class=top-page>
+  
+  <%# ヘッド部分 %>
+
+  <div class=head_pic>
+     
+
+   <div class="top-text">画面越しの気まずい会話に</br>さようなら。 </div>
+
+    <div class="top-btn">
+      <div class="top-btn_a">
+    
+      <a href=/themes class="btn-emergency">
+      <span class="btn-emergency-bottom"></span>
+      <span class="btn-emergency-top"><span >あああああ</span></span>
+      </a>
+      <h1>自動ファシリテーション</h1>
+
       </div>
-       
-        <h3 class='reason-list-text'>
-          <span class='reason-list-blue-text'>トークテーマ</span>
-          を決めてくれる
-        </h3>
-        <p class='reason-list-description'>
-          スマホで入力するだけで簡単に出品できる！
-        </p>
-      </li>
-      <li class='list'>
-      <div class=topic_game>
-      <a href=/top class="btn btn-border-shadow btn-border-shadow--color">使ってみる</a>
-      </div>
-       
-        
-        <h3 class='reason-list-text'>
-          <span class='reason-list-blue-text'>TO　do&タイムスケジュール</span>
-          で使いやすい
-        </h3>
+
+      <div><img src="assets/iphone.png" class="top_pic"> </div>
       
+     <div class="top-btn_b">
+
+      <a href=/top class="btn-emergency">
+        <span class="btn-emergency-bottom"></span>
+        <span class="btn-emergency-top"><span>押す</span></span>
+      </a>
+            <h1>スケジュール管理</h1>
+      </div>
+
+    </div>
+
   </div>
+
+  
+  <%# シーン別 %>
+<div class="issu">
+  
+  <div class=issu_1>
+   <div class=issu_title>テンポ良く会話ができないのは</br>かなりストレス</div>
+    <p>
+    <img src="assets/1531652765.png" alt="画像" style="float:bottom;" class="issu_pic">
+    <p class="pic_text">一度に一人しかしゃべることができないから</br>ついつい沈黙がおきがちなんです・・・誰か話をリードしてくれるファシリテーターみたいな人がいたらいいのにな・・・
+    </p>
+    </p>
+  </div>
+  
+   <div class=issu_２>
+   <div class=issu_itle>話が盛り上がらない</div>
+    <p>
+    <img src="assets/1544004280.png" alt="画像" style="float:bottom;" class="issu_pic">
+    <p class="pic_text">一度に一人しかしゃべることができないから</br>ついつい沈黙がおきがちなんです・・・誰か話をリードしてくれるファシリテーターみたいな人がいたらいいのにな・・・
+    </p>
+    </p>
+  </div>
+
+  <div class=issu_３>
+   <div class=issu_itle>画面越しの意思の共有にストレス</div>
+    <p>
+    <img src="assets/1522986633.png" alt="画像" style="float:bottom;" class="issu_pic">
+    <p class="pic_text">一度に一人しかしゃべることができないから</br>ついつい沈黙がおきがちなんです・・・誰か話をリードしてくれるファシリテーターみたいな人がいたらいいのにな・・・
+    </p>
+    </p>
+  </div>
+
+
+</div>
  
-<%= render "shared/footer" %>
+
