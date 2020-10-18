@@ -41,6 +41,12 @@ li {
   list-style: none;
 }
 
+.themes_pic{
+ 
+  height:200px;
+  width: 200px;
+}
+
 .heading-name {
   text-align: center;
   border-bottom: 1px solid red;
