@@ -81,14 +81,14 @@
     }
     
      
-      function talker2() {
+      function talker() {
       talker_roulette = setInterval(function() {
        document.getElementById("talker2").disabled = true;
       var idx = Math.floor( Math.random() * num_1.length );
       document.getElementById("talker_roulette").innerHTML = num_1[idx];
         }, 100);
-        }
-      ;
+        };
+        
  
       function talker2_2() {
         document.getElementById("talker2").disabled = false;
