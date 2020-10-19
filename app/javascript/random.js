@@ -29,6 +29,9 @@ function stop(){
 window.addEventListener('load',stop)
 
 
+
+
+
 // ⭐️誰が話すか
 
     //参加者一覧

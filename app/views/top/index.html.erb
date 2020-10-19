@@ -28,6 +28,7 @@
 
            
             <%= link_to list_card_path(list.id, card.id), class:"cardDetail_link" do %>
+            
               <div class="card">
                 <h3 class="card_title"><%= card.title %></h3>
                 <% if card.memo.size > 0 %>
@@ -60,8 +61,8 @@
   
    <div class="date">
    <div class="">会議日程調整</div>
-   
-   <input type="date"></input>
+  
+   <input type="date">
   </div>
       
 </div>

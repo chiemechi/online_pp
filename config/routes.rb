@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
   get 'ivents/index'
   get 'familys/index'
   get 'ofices/index'
