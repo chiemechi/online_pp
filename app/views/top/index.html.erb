@@ -28,6 +28,7 @@
 
            
             <%= link_to list_card_path(list.id, card.id), class:"cardDetail_link" do %>
+            
               <div class="card">
                 <h3 class="card_title"><%= card.title %></h3>
                 <% if card.memo.size > 0 %>
@@ -47,4 +48,22 @@
       </div>
     <% end %>
   </div>
+   <div class="stopwatch"> 
+    <div class="tim_pice">
+    <div class="watch-title">ストップウォッチ</div>
+    <img src="assets/1513420118.png" alt="画像" style="float:bottom;" class="issu_pic">
+    <div id ="tyme">00:00:00.000</div>
+    <input id="start" type="button" value="start">
+    <input id="stop" type="button" value="stop">
+    <input id="rest" type="button" value="reset">
+    <!-- 日付入力 -->
+    </div>
+  
+   <div class="date">
+   <div class="">会議日程調整</div>
+  
+   <input type="date">
+  </div>
+      
+</div>
 </div>

@@ -71,3 +71,31 @@
       background-color: white;
      }
        
+
+     .stopwatch{
+      margin-left:20px ;
+      margin-top:50px ;
+      width: 3000px;
+     /* background:yellowgreen; */
+     text-align: center;
+     display: flex;
+    }
+
+
+    .day_pic{ 
+      height: 300px;
+      width: 300px;
+
+     }
+
+     .date{
+       margin-left: 100px ;
+     }
+   
+     .top_pic{
+
+       height: 300px;
+       width: 300px;
+
+     }
+

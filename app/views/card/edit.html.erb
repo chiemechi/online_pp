@@ -12,6 +12,16 @@
         <%= f.label :memo %>
         <%= f.text_area :memo, class: "form-control", placeholder: "詳細" %>
       </div>
+      <div class="img-upload">
+          <div class="weight-bold-text">
+            添付資料
+          </div>
+          <div class="click-upload">
+            <%= f.file_field :image, id:"item-image" %>
+            <div class="preview" id="image-list">
+            
+
+        </div>
       <div class="cardeditForm_memo">
         <label>リスト名</label>
         <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' } %>

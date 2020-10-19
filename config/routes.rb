@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
+  get 'ivents/index'
+  get 'familys/index'
+  get 'ofices/index'
   devise_for :users
   root to: "topics#index"
   resources :users
@@ -7,6 +11,10 @@ Rails.application.routes.draw do
 
   resources :list, only:[:new,:create,:edit,:update,:destroy]do
   resources :card, except:[:index]
-end
+  end
+
+  resources :familys, only: :index
+  resources :ofices, only: :index
+  resources :ivents, only: :index
 
 end

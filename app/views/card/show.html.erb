@@ -13,6 +13,14 @@
         <div>リスト名</div>
         <div><%= @card.list.title %></div>
       </div>
+      <div class="cardContents_listStatus">
+        <div>画像</div>
+          <%= image_tag @card.image, class: 'message-image' if @card.image.attached? %>
+          
+      </div>
+
+
+
       <div class="cardContents_btnArea">
       <%= link_to '編集する', edit_list_card_path(@card.list, @card), class: "edit_btn" %>
      </br>

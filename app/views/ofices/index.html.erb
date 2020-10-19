@@ -1,14 +1,20 @@
 
-
-<header>    
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<header>
+    
+     
 <nav class="slidemenu">
   
   <!-- Item 1 -->
-  <input  type="radio" name="slideItem" onclick="location.href='/themes' "id="slide-item-1" class="slide-toggle"checked/>
+  <input  type="radio" name="slideItem" onclick="location.href='/themes' "id="slide-item-1" class="slide-toggle" />
   <label for="slide-item-1"><p class="icon">♬</p><span>友達ver</span></label>
   
   <!-- Item 2 -->
-  <input  type="radio" name="slideItem"  onclick="location.href='/ofices' "id="slide-item-2" class="slide-toggle"/>
+  <input  type="radio" name="slideItem"  onclick="location.href='/ofices' "id="slide-item-2" class="slide-toggle"checked/>
   <label for="slide-item-2"><p class="icon">★</p><span>会社ver</span></label>
   
   <!-- Item 3 -->
@@ -29,27 +35,21 @@
 </nav>
      
  </header>
+
+ 
   
  <body>
   <div class="upper-content">
 
   
      <div class="outline">
-              
-           
-           <div > 
-           <img src="assets/1531652689.png" alt="画像" style="float:bottom;" class="themes_pic"> 
-         <div class="balloon2-left">
-          <p>ルーレットにしたがって</br>話しをしてください</p>
-        </div>          
-         </div>
-
-
-
-          <div class="roulette" id="roulette">何を話そうか</div>
-        <br/>
-        <input type="button" value="スタート" id="start" >
-        <input type="button" value="ストップ" id="stop" >
+  <div> 
+   <img src="assets//1513431618-1.png" alt="画像" style="float:bottom;" class="themes_pic">
+   </div>
+        <div class="roulette" id="roulette">何を話そうか</div>
+        <br />
+        <input type="button" value="スタート" id="start" onclick="start();"/>
+        <input type="button" value="ストップ" id="stop" onclick="stop();"/>
       </div>  
  
     <div class="kakeru">✖️</div>
@@ -63,6 +63,5 @@
           <ul></ul>
           <input type="text" id="add-name" size="50"  placeholder="" ><button id="add-button">add</button>
              
-    </div> 
-
+    </div>
  </body>
