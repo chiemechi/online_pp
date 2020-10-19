@@ -1,8 +1,4 @@
 
-<!DOCTYPE html>
-<html>
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
 <header>
     
@@ -45,7 +41,6 @@
     // ルーレットを開始
     function start() {
     roulette = setInterval(function() {
-    document.getElementById("start").disabled = true;
 
     var idx = List1[Math.floor( Math.random() * List1.length )];
     // ルーレット
@@ -88,19 +83,8 @@
       document.getElementById("talker_roulette").innerHTML = num_1[idx];
         }, 100);
         }
-      ;
- 
-      function talker2_2() {
-        document.getElementById("talker2").disabled = false;
-        if(talker_roulette) {
-          clearInterval(talker_roulette);
-        }
-      }   
-
-
-  </script>
- 
- 
+  
+   
  </head>
  
   
@@ -110,20 +94,20 @@
   
      <div class="outline">
               
-           <%# <div class=coment> %>
-           <div> <img src="assets/1531652689.png" alt="画像" style="float:bottom;" class="themes_pic"> </div>
-            <%# <div class="balloon1-right">
-            <p>こんにちは。これは例です。</p>
-            </div>
-            <div> %>
-
+           
+           <div > 
+           <img src="assets/1531652689.png" alt="画像" style="float:bottom;" class="themes_pic"> 
+         <div class="balloon2-left">
+          <p>OOさんOOを話してください</p>
+        </div>          
+         </div>
 
 
 
           <div class="roulette" id="roulette">何を話そうか</div>
         <br/>
-        <input type="button" value="スタート" id="start" onclick="start();"/>
-        <input type="button" value="ストップ" id="stop" onclick="stop();"/>
+        <input type="button" value="スタート" id="start" >
+        <input type="button" value="ストップ" id="stop" >
       </div>  
  
     <div class="kakeru">✖️</div>
