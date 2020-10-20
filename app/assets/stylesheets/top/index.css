@@ -99,3 +99,15 @@
 
      }
 
+     .memo{
+       margin-top:100px ;
+     }
+     
+    .memos {
+      margin-left:80px ;
+     }
+     
+    
+     .done {
+      text-decoration: line-through;
+     }
