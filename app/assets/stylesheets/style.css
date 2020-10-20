@@ -342,24 +342,13 @@ table {
   border-spacing: 0;
 }
 
-/* ==========================================================================
- * CSS SETTING
- * by Hiroaki WAKATSUKI
- * Converted 2014/2/16
- * ========================================================================== */
-*,
+
+
 *:before,
 *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-img,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
 }
 
 object,
