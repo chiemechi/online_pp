@@ -1,5 +1,4 @@
 class CardController < ApplicationController
-
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -18,17 +17,13 @@ class CardController < ApplicationController
   end
 
   def show
-  
   end
 
   def edit
     @lists = List.where(user: current_user)
-   
   end
 
   def update
-   
-    
     if @card.update_attributes(card_params)
       redirect_to top_index_path
     else
@@ -41,13 +36,13 @@ class CardController < ApplicationController
     redirect_to top_index_path
   end
 
-
   private
-    def card_params
-      params.require(:card).permit(:title, :memo, :list_id,:image)
-    end
 
-    def set_card
-      @card = Card.find_by(id: params[:id])
-    end
+  def card_params
+    params.require(:card).permit(:title, :memo, :list_id, :image)
+  end
+
+  def set_card
+    @card = Card.find_by(id: params[:id])
+  end
 end
