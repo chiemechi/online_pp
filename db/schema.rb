@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_10_21_161459) do
   end
 
   create_table "records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "record_day", null: false
     t.string "title", null: false
     t.text "memo"
     t.datetime "created_at", precision: 6, null: false

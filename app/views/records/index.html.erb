@@ -1,3 +1,19 @@
+
+<header class="header">
+      <nav class="nav">
+        <ul class="header_menu">
+          <li class="header_menu_title"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+          <li class="nav-link"><%= current_user.name %>さん</li>
+          <li><%= link_to "リストに戻る", new_list_path, class: "nav-link listNew" %></li>
+          <li><%= link_to "議事録を作成", new_record_path, class: "nav-link listNew" %></li>
+          <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+
+        </ul>
+           </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 <div class='carddetailPage'>
   <div class="container">
     <div class="cardContents">
@@ -7,6 +23,9 @@
         <div>タイトル</div>
         <h2><%= record.title %></h2>
       </div>
+       <div>会議の日程</div>
+       <div><%= record.record_day %></div>
+
       <div class="cardContents_memo">
         <div>メモ</div>
         <div><%= record.memo %></div>
@@ -14,7 +33,7 @@
     
       <div class="cardContents_listStatus">
         <div>画像</div>
-          <%= image_tag record.image, class: 'message-image' if record.image.attached? %>
+          <%= image_tag record.image.variant(resize: '500x500'), class: 'message-image' if record.image.attached? %>
       <%end%>
           
       </div>

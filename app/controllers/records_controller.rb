@@ -41,7 +41,7 @@ class RecordsController < ApplicationController
   private
 
   def record_params
-    params.require(:record).permit(:title, :memo,:image)
+    params.require(:record).permit(:title, :memo,:image,:record_day)
   end
 
   def set_record
