@@ -10,5 +10,44 @@
 
 ## 機能紹介
 - 新規会員登録・ログインをすると,自動ファシリテーション、スケジュール管理のアプリが使用できます。
-
+-自動ファシリテーション
  
+
+ ## Requirement
+- Ruby 2.5.1
+- Rails 5.2.3
+## Installation
+    $ git clone https://github.com/chiemechi/online_pp/blob/master/README.md
+    $ cd online_pp
+    $ bundle install
+
+
+## Usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|encrypted_password|string|null: false|
+
+### Association
+- has_meny :cards
+- has_meny :lists
+
+## Cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|list_id|integer|null: false|
+|memo|string|null: false|
+
+### Association
+- belongs_to :list
+
+## listsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title_id|references|null: false, foreign_key: true|
+|name|string|null: false|
+
+### Association
+- belongs_to :user
