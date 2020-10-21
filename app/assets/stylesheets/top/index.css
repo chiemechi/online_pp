@@ -111,3 +111,11 @@
      .done {
       text-decoration: line-through;
      }
+
+     ul{
+      width: max-content;
+    }
+    li{
+      display: flex;
+      justify-content: space-between;
+    }

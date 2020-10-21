@@ -4,7 +4,7 @@
         <ul class="header_menu">
           <li class="header_menu_title"><%= link_to "kanban", root_path, class: "nav-link" %></li>
           <li class="nav-link"><%= current_user.name %>さん</li>
-          <li><%= link_to "リストに戻る", new_list_path, class: "nav-link listNew" %></li>
+          <li><%= link_to "リストに戻る",top_index_path , class: "nav-link listNew" %></li>
           <li><%= link_to "議事録を作成", new_record_path, class: "nav-link listNew" %></li>
           <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
 
@@ -13,31 +13,40 @@
           </li>
         </ul>
       </nav>
-    </header>
-<div class='carddetailPag'>
-  <div class="container">
-    <div class="recordContents">
-      <div class="cardContents_title">
+ </header>
+   
+
+
+    
+
+<div class="Form">
+   <h6>議事録</h6>
+        
     <% @records.each do |record| %>
-    <div class="header_action">
+        <div class="header_action">
             <%= link_to content_tag(:i, '', class: 'fas fa-trash'), record, method: :delete %>
             <%= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_record_path(record)) %>
           </div>
+        <div class="records">
+        <div class="record_pic"> 
+        <%= image_tag record.image.variant(resize: '700x900'), class: 'message-image' if record.image.attached? %>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">■議題
+          </p>
+          <%= record.title %>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">■会議日</p>
+          <div><%= record.record_day %></div>
 
-        <div class="record_title">タイトル</div>
-        <h2><%= record.title %></h2>
-      </div>
-       <div>会議の日程</div>
-       <div><%= record.record_day %></div>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg">■■メモ</p>
+          <div><%= record.memo %></div>
+        </div>
+        </div> 
+        <hr class="cp_hr04" />
+   <%end%> 
 
-      <div class="cardContents_memo">
-        <div>メモ</div>
-        <div><%= record.memo %></div>
-      </div>
-    
-      <div class="cardContents_listStatus">
-        <div>画像</div>
-          <%= image_tag record.image.variant(resize: '1000x1000'), class: 'message-image' if record.image.attached? %>
-      <%end%>
-          
-      </div>
+</div>
