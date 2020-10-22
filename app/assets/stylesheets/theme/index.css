@@ -149,3 +149,12 @@ li {
 .slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
 
 
+.taker_boxes{
+  text-align: center;
+  margin-left:30zpx ;
+}
+
+.add{
+  margin-left:350px ;
+  
+}
