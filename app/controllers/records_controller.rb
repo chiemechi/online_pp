@@ -1,5 +1,6 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:show, :edit, :update, :destroy]
+ 
 
   def index
     @records = Record.order('created_at ASC')
@@ -35,6 +36,10 @@ class RecordsController < ApplicationController
   def destroy
     @record.destroy
     redirect_to top_index_path
+  end
+
+  def search
+    @records = Record.search(params[:keyword])
   end
 
   private

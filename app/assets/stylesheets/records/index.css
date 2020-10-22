@@ -175,12 +175,18 @@ h6{
   text-align: center;
 }
 
-.records{
-  /* margin-top: 100px; */
-}
-
 .cp_hr04 {
 	border-width: 3px 0 0 0;
 	border-style: double;
 	border-color: #ff6f00;
+}
+
+.search-bt{
+  width: 100px;
+  height: 40px;
+ 
+}
+.serch{
+  margin-left: 150px;
+  
 }

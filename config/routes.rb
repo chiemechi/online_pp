@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   resources :familys, only: :index
   resources :ofices, only: :index
   resources :ivents, only: :index
-  resources :records
+  resources :records do
+    collection do
+      get 'search'
+    end
+  end
  
 end
