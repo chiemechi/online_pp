@@ -10,7 +10,7 @@
 }
 
 .header_menu{
-  background: #026aa7;
+  background-color:mediumturquoise;
   padding: 10px;
   color:white;
 }
@@ -118,4 +118,9 @@
     li{
       display: flex;
       justify-content: space-between;
+    }
+
+    .message-image{
+     height:200px ;
+     width: 200px;
     }
