@@ -13,7 +13,7 @@ class RecordsController < ApplicationController
   def create
     @record = Record.new(record_params)
     if @record.save
-      redirect_to top_index_path
+      redirect_to records_path
     else
       render action: :new
     end
@@ -27,7 +27,7 @@ class RecordsController < ApplicationController
 
   def update
     if @record.update_attributes(record_params)
-      redirect_to top_index_path
+      redirect_to records_path
     else
       render action: :edit
     end
@@ -35,7 +35,7 @@ class RecordsController < ApplicationController
 
   def destroy
     @record.destroy
-    redirect_to top_index_path
+    redirect_to records_path
   end
 
   def search
