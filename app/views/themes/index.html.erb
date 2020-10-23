@@ -12,17 +12,14 @@
   
   <!-- Item 3 -->
   <input type="radio" name="slideItem" onclick="location.href='/familys' "id="slide-item-3" class="slide-toggle"/>
-  <label for="slide-item-3"><p class="icon">✈</p><span>家族.ver</span></label>
+  <label for="slide-item-3"><p class="icon">✈</p><span>帰省.ver</span></label>
   
   <!-- Item 4 -->
   <input type="radio" name="slideItem" onclick="location.href='/ivents' "id="slide-item-4" class="slide-toggle"/>
   <label for="slide-item-4"><p class="icon">✎</p><span>イベント.ver</span></label>
 
-  <input type="radio" name="slideItem" onclick="location.href='/ivents' "id="slide-item-4" class="slide-toggle"/>
-  <label for="slide-item-4"><p class="icon">○</p><span>自由.ver</span></label>
 
- <input type="radio" name="slideItem" onclick="location.href='/' "id="slide-item-4" class="slide-toggle"/>
-  <label for="slide-item-4"><p class="icon">✎</p><span>■TOP画面に戻る</span></label>
+
 
 
   <div class="clear"></div>
@@ -43,14 +40,15 @@
               
             <div class="taker_boxes">
             <div>
-          <img src="assets/1531652689.png" alt="画像" style="float:bottom;" class="themes_pic"> 
+            <%= image_tag "1531652689.png", class:'themes_pic'%>
+       
           </div>
             <div class="roulette" id="roulette">何を話そうか</div>
                 <br/>
                 <input type="button" value="スタート" id="start" >
                 <input type="button" value="ストップ" id="stop" >
             
-          ç
+        
             <div class="kakeru">✖️</div>
             
 
