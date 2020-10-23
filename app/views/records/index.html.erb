@@ -1,0 +1,51 @@
+<header class="header">
+      <nav class="nav">
+        <ul class="header_menu">
+          <li class="header_menu_title"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+          <li class="nav-link"><%= current_user.name %>さん</li>
+          <li><%= link_to "議事録を作成", new_record_path, class: "nav-link listNew" %></li>
+          <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+
+        </ul>
+           </ul>
+          </li>
+        </ul>
+      </nav>
+ </header>
+
+<div class="Form">
+   <h6>議事録</h6>
+   <div class="serch">
+<%= form_with(url: search_records_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "議事録を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-bt" %>
+  </div>
+<% end %>        
+    <% @records.each do |record| %>
+        <div class="record_action">
+            <%= link_to content_tag(:i, '', class: 'fas fa-trash'), record, method: :delete %>
+            <%= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_record_path(record)) %>
+        </div>
+        <div class="records">
+        <div class="record_pic"> 
+        <%= image_tag record.image.variant(resize: '800x900'), class: 'message' if record.image.attached? %>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">■議題
+          </p>
+          <%= record.title %>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">■会議日</p>
+          <div><%= record.record_day %></div>
+
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg">■■メモ</p>
+          <div><%= record.memo %></div>
+        </div>
+        </div> 
+        <hr class="cp_hr04" />
+   <%end%> 
+
+</div>

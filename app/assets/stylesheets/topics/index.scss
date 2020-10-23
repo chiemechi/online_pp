@@ -36,12 +36,13 @@
   display: flex;
   justify-content: space-around;
  text-align: center;
- padding-top:200px ;
+ padding-top: 50px;
+
 }
 
-.top-btn{
-  padding-top:200px ;
-}
+// .top-btn{
+//   padding-top:100px ;
+// }
 
 // botannCSS
 *,
@@ -182,4 +183,7 @@ a.btn-emergency:active .btn-emergency-top {
 
 .done {
   text-decoration: line-through;
+}
+.pic_text{
+  width: 300px;
 }

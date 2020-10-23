@@ -46,3 +46,4 @@ class CardController < ApplicationController
     @card = Card.find_by(id: params[:id])
   end
 end
+

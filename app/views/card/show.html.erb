@@ -15,14 +15,14 @@
       </div>
       <div class="cardContents_listStatus">
         <div>画像</div>
-          <%= image_tag @card.image, class: 'message-image' if @card.image.attached? %>
+          <%= image_tag @card.image.variant(resize: '500x500'), class: 'message-image' if @card.image.attached? %>
           
       </div>
 
 
 
       <div class="cardContents_btnArea">
-      <%= link_to '編集する', edit_list_card_path(@card.list, @card), class: "edit_btn" %>
+      <%= link_to '仕事を振り分ける', edit_list_card_path(@card.list, @card), class: "edit_btn" %>
      </br>
      <%= link_to '削除をする', list_card_path(@card.list, @card), class: "delete_btn", method: :delete, data: { confirm: "このカードを削除して大丈夫ですか?" } %>
       </div>

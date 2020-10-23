@@ -3,8 +3,10 @@
         <ul class="header_menu">
           <li class="header_menu_title"><%= link_to "kanban", root_path, class: "nav-link" %></li>
           <li class="nav-link"><%= current_user.name %>さん</li>
-          <li><%= link_to "リストを作成", new_list_path, class: "nav-link listNew" %></li>
+          <li><%= link_to "リストを作成する", new_list_path, class: "nav-link listNew" %></li>
+          <li><%= link_to "議事録一覧", records_path, class: "nav-link listNew" %></li>
           <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+
         </ul>
            </ul>
           </li>
@@ -23,16 +25,17 @@
           </div>
         </div>
 
+
         <div class="cardWrapper">
           <% list.cards.each do |card| %>
 
            
-            <%= link_to list_card_path(list.id, card.id), class:"cardDetail_link" do %>
+            <%= link_to  list_card_path(list.id, card.id), class:"cardDetail_link" do %>
             
               <div class="card">
                 <h3 class="card_title"><%= card.title %></h3>
                 <% if card.memo.size > 0 %>
-                  <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
+                <div class="card_detail is-exist" > <i class="fas fa-bars"></i></div>
                 <% end %>
               </div>
             <% end %>
@@ -48,10 +51,9 @@
       </div>
     <% end %>
   </div>
-   <%# <div class="stopwatch"> 
+   <div class="stopwatch"> 
     <div class="tim_pice">
-    <div class="watch-title">ストップウォッチ</div>
-    <img src="assets/1513420118.png" alt="画像" style="float:bottom;" class="issu_pic">
+     <%= image_tag "1513420118.png", class:'issu_pic'%> 
     <div id ="tyme">00:00:00.000</div>
     <input id="start" type="button" value="start">
     <input id="stop" type="button" value="stop">
@@ -60,14 +62,14 @@
     </div>
   
    <div class="date">
-   <div class="">会議日程調整</div>
+   <div class=""><h5>会議日程調整</h5></div>
   
    <input type="date">
-  </div> %>
+  </div>
 
  
  <div class="memos">
-<div class=format>今日はなす流れ </div>
+<div class=format><h5>会議の流れ</h5></div>
 <div>
  <ul id="memos"></ul>
  </div>
