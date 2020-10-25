@@ -12,7 +12,8 @@
 
 
 <p align="center">
-![8b06d177a7b7606b1ea802d66c028add](https://user-images.githubusercontent.com/70624406/97114741-a7bfc300-1735-11eb-8801-b4e724173f65.gif)
+<img width="1129"  src="https://user-images.githubusercontent.com/70624406/97114741-a7bfc300-1735-11eb-8801-b4e724173f65.gif">
+
 </p>
 
 この機能はルーレットで誰が何を話すかを自動で決めてくれます。テンポよく会話ができないストレスを解消。
