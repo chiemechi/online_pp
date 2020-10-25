@@ -1,4 +1,20 @@
+<header class="header">
+    <div>
+    <h1 class="#">ONLINE PP</h1>
+    </div>
+   <div>
+       <% if user_signed_in? %>
 
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    
+        <% else %>
+
+            <%= link_to "ログイン", new_user_session_path, class: "post" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+
+        <% end %>
+    </div>
+    </header>
 <div class="contents row">
   <div class="container">
     <h2>Sign up</h2>
@@ -34,6 +50,7 @@
     <% end %>
   </div>
 </div>
+
 
 
 
