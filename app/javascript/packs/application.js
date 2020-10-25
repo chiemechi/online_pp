@@ -10,6 +10,7 @@ require("channels")
 require("../random")
 require("../preview.js")
 require("../memo.js")
+require("../time.js")
 
 
 
