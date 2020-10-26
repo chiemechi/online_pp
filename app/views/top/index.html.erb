@@ -1,3 +1,4 @@
+
 <header class="header">
       <nav class="nav">
         <ul class="header_menu">
@@ -13,6 +14,23 @@
         </ul>
       </nav>
     </header>
+     <script>
+      function updateClock() {
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        if ( hour < 10 ) hour = "0" + hour;
+        if ( minute < 10 ) minute = "0" + minute;
+        if ( second < 10 ) second = "0" + second;
+        document.getElementById('myClock').innerHTML = hour+":"+minute+":"+second;
+      }
+      function start() {
+        setInterval("updateClock();", 1000);
+        updateClock();
+      }
+    </script>
+
 <div class="topPage">
   <div class="listWrapper">
     <% @lists.each do |list| %>
@@ -54,7 +72,12 @@
    <div class="stopwatch"> 
   
     <div class=""><h5>時計機能</h5>
-<p id="RealtimeClockArea2">※ここに時計(2桁固定版)が表示されます。</p>
+     <%= image_tag "1513420118.png", class:'issu_pic'%>
+ <body onload="start();">
+<div class=time id="myClock" align="center">
+      
+</div>
+
   </div>
    <div class="date">
    <div class=""><h5>会議日程調整</h5></div>
