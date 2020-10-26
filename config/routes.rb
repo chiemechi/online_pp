@@ -21,5 +21,11 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resources :pics do
+    collection do
+      get 'search'
+    end
+  end
  
 end

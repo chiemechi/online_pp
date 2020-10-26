@@ -1,0 +1,50 @@
+ <header class="header">
+      <nav class="nav">
+        <ul class="header_menu">
+          <li class="header_menu_title"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+          <li class="nav-link"><%= current_user.name %>さん</li>
+                   <li><%= link_to "思い出一覧", pics_path, class: "nav-link listNew" %></li>
+          <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+
+        </ul>
+           </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+ 
+ <div class="search">
+
+ <h6>検索結果の表示</h6>
+
+  </div>
+
+<div class="contents row">
+   <% @pics.each do |pic| %>
+        <div class="record_action">
+            <%= link_to content_tag(:i, '', class: 'fas fa-trash'), pic, method: :delete %>
+            <%= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_pic_path(pic)) %>
+        </div>
+        <div class="records">
+        <div class="record_pic"> 
+        <%= image_tag pic.image.variant(resize: '800x900'), class: 'message' if pic.image.attached? %>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">■議題
+          </p>
+          <%= pic.title %>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">オンライン飲み会日</p>
+          <div><%= pic.record_day %></div>
+
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg">■メモ</p>
+          <div><%= pic.memo %></div>
+        </div>
+        </div> 
+        <hr class="cp_hr04" />
+   <%end%> 
+</div>
