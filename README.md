@@ -40,14 +40,15 @@ https://onlines-suport.herokuapp.com/
 <p align="center">
 <img width="500"  src="https://user-images.githubusercontent.com/70624406/97556217-82280780-1a1c-11eb-9f72-ede614e9f31b.gif">
 
-
+</p>
+<p align="center">
 この機能はルーレットで誰が何を話すかを自動で決めてくれます。会社の上司、帰省自粛でなかなか会えない家族、イベントなどの初めて会う人・・・リモート相手にあった話題を提供します。
 
 <img width="576" alt="スクリーンショット 2020-10-27 2 22 52" src="https://user-images.githubusercontent.com/70624406/97604533-f2508080-1a50-11eb-9040-3849164c589d.png">
 
 また、オンライン呑みの様子を記念写真として記録できるように画像投稿機能を付けました。
-</p>
 
+</p>
 
 <h3 align= "center">-リモート会議サポート -</h3>
 
