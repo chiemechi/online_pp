@@ -1,7 +1,9 @@
 # README
 <h1 align="center">オンライン環境サポートアプリ</h1><img width="1014" alt="TOP" src="https://user-images.githubusercontent.com/70624406/97114452-e6547e00-1733-11eb-9040-e83b12e11c8e.png">
 
-コロナウィルスの影響で、お仕事、イベントと、ことあるごとにリモート化に切り替わることが増えました。そこでリモハラという言葉が生まれたりと画面越しの新しいコミニケーションの形にストレスを抱えている人が多いというのが現状です。その現状に対して少しでも楽しくストレスを解消できるものを作りたいと考えでこのアプリを制作しました。
+<h3 align= "center">-制作の背景 -</h3>
+
+コロナウィルスの影響で、お仕事、イベントと、ことあるごとにリモート化に切り替わることが増えました。それに伴い画面越しの新しいコミニケーションの形にストレスを抱えている人が多いというのが現状です。その現状に対して少しでも楽しくストレスを解消できるものを作りたいと考えでこのアプリを制作しました。
 
 ## :paperclip: 主な使用言語
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
@@ -39,12 +41,25 @@
 https://onlines-suport.herokuapp.com/
 ### ****  
 　
-## 💬 Usage
+<h2> 🎮 環境・使用技術 </h2>
+### フロントエンド
+- HTML/CSS
+- JavaScript
+- jQuery
+
+### バックエンド
+- Ruby 2.6.5
+- Rails 6.0.3
+### Webサーバー
+- Nginx : 1.18.0
+### アプリケーションサーバー
+- （開発環境）Puma : 4.3.3
+- （本番環境）Unicorn : 5.4.1
+### データベース
+- （開発環境）MySQL 5.6.47
+- （本番環境）MariaDB : 5.5.64
 
 
- ## Requirement
-- Ruby 2.5.1
-- Rails 5.2.3
 ## Installation
     $ git clone https://github.com/chiemechi/online_pp/blob/master/README.md
     $ cd online_pp
