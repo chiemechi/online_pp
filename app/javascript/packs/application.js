@@ -11,6 +11,9 @@ require("../random")
 require("../preview.js")
 require("../memo.js")
 require("../time.js")
+require("../ofice.js")
+require("../ivent.js")
+require("../family.js")
 
 
 
