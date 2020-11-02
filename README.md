@@ -1,7 +1,7 @@
 # README
-<h1 align="center">オンライン環境サポートアプリ</h1><img width="1014" alt="TOP" src="https://user-images.githubusercontent.com/70624406/97114452-e6547e00-1733-11eb-9040-e83b12e11c8e.png">
+<h1 align="center">ONLINE SUPPORT</h1><img width="1014" alt="TOP" src="https://user-images.githubusercontent.com/70624406/97114452-e6547e00-1733-11eb-9040-e83b12e11c8e.png">
 
-<h2 align="center">Forte</h3>
+<h2 align="center">ONLINE SUPPORT</h3>
 <p align="center">
 「画面越しのコミニケーションってストレス」
 </p>
@@ -14,9 +14,10 @@
 ●ID/Pass
 ID: admin
 Pass: 2222
+
 テスト用アカウント等
-メールアドレス: abc@gmail.com
-パスワード: cm10
+メールアドレス: aaa@gmail.com
+パスワード: 111111
 https://onlines-suport.herokuapp.com/
 
 
