@@ -10,7 +10,13 @@
 </p>
 
 
-<h2> 🌐 URL </h2>
+<h2> 🌐 URL  パスワード </h2>
+●ID/Pass
+ID: admin
+Pass: 2222
+テスト用アカウント等
+メールアドレス: abc@gmail.com
+パスワード: cm10
 https://onlines-suport.herokuapp.com/
 
 
