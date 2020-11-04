@@ -16,8 +16,8 @@ ID: admin
 Pass: 2222
 
 テスト用アカウント等
-メールアドレス: aaa@gmail.com
-パスワード: 111111
+メールアドレス: ccc@gmail.com
+パスワード:123456
 https://onlines-suport.herokuapp.com/
 
 

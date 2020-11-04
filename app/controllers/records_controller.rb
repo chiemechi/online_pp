@@ -3,7 +3,7 @@ class RecordsController < ApplicationController
  
 
   def index
-    @records = Record.order('created_at ASC')
+    @records =current_user.records
   end
 
   def new
@@ -45,7 +45,7 @@ class RecordsController < ApplicationController
   private
 
   def record_params
-    params.require(:record).permit(:title, :memo,:image,:record_day)
+    params.require(:record).permit(:title, :memo,:image,:record_day).merge(user_id: current_user.id)
   end
 
   def set_record

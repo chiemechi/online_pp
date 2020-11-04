@@ -3,7 +3,7 @@ class PicsController < ApplicationController
    
   
     def index
-      @pics = Pic.order('created_at ASC')
+      @pics=current_user.pics
     end
   
     def new
@@ -47,7 +47,7 @@ class PicsController < ApplicationController
   
     private
     def pics_params
-      params.require(:pic).permit(:title, :memo,:image,:record_day)
+      params.require(:pic).permit(:title, :memo,:image,:record_day).merge(user_id: current_user.id)
     end
     
     def set_pic

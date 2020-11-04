@@ -4,6 +4,7 @@ class Pic < ApplicationRecord
   validates :title, presence: true
   validates :record_day, presence: true
   validates :image, presence: true
+  belongs_to :user
 
 
 
