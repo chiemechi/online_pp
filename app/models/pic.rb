@@ -16,3 +16,4 @@ class Pic < ApplicationRecord
     end
   end
 end
+
