@@ -12,12 +12,18 @@
 
 <h2> 🌐 URL  パスワード </h2>
 ●ID/Pass
+</br>
 ID: admin
+</br>
 Pass: 2222
+</br>
 
 テスト用アカウント等
+</br>
 メールアドレス: ccc@gmail.com
+</br>
 パスワード:123456
+</br>
 https://onlines-suport.herokuapp.com/
 
 
